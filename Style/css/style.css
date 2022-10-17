@@ -21,15 +21,6 @@ header > div a:link, header > div a:visited {
   color: #1b1b1b;
   text-decoration: none;
 }
-header > div a:hover {
-  color: #3396ff;
-}
-header > div a:hover svg path {
-  fill: #3396ff;
-}
-header > div a:hover svg circle {
-  stroke: #3396ff;
-}
 header > div a:active {
   color: #0063cc;
 }
@@ -44,7 +35,6 @@ header > div a svg circle {
 }
 header > div .header__menu {
   max-width: 90%;
-  overflow: hidden;
 }
 header > div .header__menu ul {
   display: flex;
@@ -53,18 +43,63 @@ header > div .header__menu ul {
 header > div .header__menu ul li {
   margin: 0 2px;
 }
-header > div .header__menu ul li > a > div {
+header > div .header__icon svg:hover path {
+  fill: #3396ff;
+}
+header > div .header__button {
   padding: 8px;
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-header > div .header__menu ul li > a > div p {
+header > div .header__button p {
   white-space: nowrap;
 }
-header > div .header__menu svg {
+header > div .header__button svg {
   width: 22px;
   height: 22px;
+}
+header > div .dropdown {
+  position: relative;
+  display: inline-block;
+  border-radius: 7px;
+}
+header > div .dropdown__content {
+  display: none;
+  position: absolute;
+  width: auto;
+  height: auto;
+}
+header > div .dropdown__content ul {
+  margin-top: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 0.5px solid #DBD5D6;
+  box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.1);
+  -webkit-backdrop-filter: blur(30px);
+          backdrop-filter: blur(30px);
+  border-radius: 7px;
+  display: flex;
+  padding: 10px;
+  flex-direction: column;
+  align-items: flex-start;
+  row-gap: 2px;
+}
+header > div .dropdown__content ul li {
+  padding: 2px 5px;
+  border-radius: 7px;
+  width: 95%;
+}
+header > div .dropdown__content ul li a {
+  display: block;
+}
+header > div .dropdown__content ul li:hover {
+  background: rgba(0, 0, 0, 0.1);
+}
+header > div .dropdown:hover {
+  background: rgba(207, 207, 207, 0.4);
+}
+header > div .dropdown:hover .dropdown__content {
+  display: block;
 }
 
 * {
@@ -81,5 +116,5 @@ header > div .header__menu svg {
   position: fixed;
   top: 0;
   left: 0;
-  filter: blur(25px);
+  filter: blur(20px);
 }
