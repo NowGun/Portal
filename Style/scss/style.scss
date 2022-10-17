@@ -1,4 +1,5 @@
-@import './layouts/header';
+@import './_colors';
+@import './sections/_header';
 
 
 * {
@@ -9,7 +10,7 @@
 
 
 .background__image {
-    background-image: url('/PortalRedesign/Style/img/photo_2022-10-07_17-25-49.jpg');
+    background-image: url('/Style/img/photo_2022-10-07_17-25-49.jpg');
     background-size: cover;
     width: 100%;
     height: 100%;
@@ -17,4 +18,4 @@
     top: 0;
     left: 0;
     filter: blur(25px);
-}
+} 

@@ -19,33 +19,50 @@ header > div {
     }
 
     a {
-        &:link, &:visited, &:focus {
-            color: black;
+        &:link, &:visited {
+            color: $text-default;
             text-decoration: none;
         }
 
         &:hover {
-            color: #007aff;
+            color: $hover;
+
             svg {
                 path {
-                    fill: #007aff;
+                    fill: $hover;
                 }
 
                 circle {
-                    stroke: #007aff;
+                    stroke: $hover;
+                }     
+            }
+        }
+        
+        &:active {
+            color: $active;
+
+            svg {
+                path {
+                    fill: $active;
+                }
+
+                circle {
+                    stroke: $active;
                 }     
             }
         }
 
         svg {
             circle {
-                stroke: black;
+                stroke: $text-default;
             }
         }
     } 
 
     .header__menu {
-        
+        max-width: 90%;
+        overflow: hidden;
+
         ul {
             display: flex;
             align-items: flex-end;
@@ -59,6 +76,10 @@ header > div {
                 display: flex;
                 flex-direction: column;
                 align-items: center;
+
+                p {
+                    white-space: nowrap;
+                }
             }
         }
 
@@ -67,21 +88,5 @@ header > div {
             height: 22px;
         }
         
-    }
-
-    .header__dropdown {
-        position: absolute;
-        top: 100%;
-        left: 0;
-        width: 100%;
-        z-index: 5000;
-        visibility: hidden;
-        opacity: 0;
-        background-color: red;
-
-    }
-    li:hover .header__dropdown {
-        visibility: visible;
-        opacity: 1;
     }
 }
