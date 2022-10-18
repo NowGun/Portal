@@ -19,7 +19,6 @@ header>div {
     }
 
     a {
-
         &:link,
         &:visited {
             color: $text-default;
@@ -61,8 +60,9 @@ header>div {
     }
 
     .header__icon svg {
-        &:hover {
-            path {
+        &:hover {        
+            path {        
+                transition: fill 0.2s ease-in-out;
                 fill: $hover;
             }
         }
@@ -88,14 +88,17 @@ header>div {
         position: relative;
         display: inline-block;
         border-radius: 7px;
-
+        transition: all 0.3s ease;
         &__content {
-            display: none;
+            visibility: hidden;
+            opacity: 0;
             position: absolute;
+            top: 100%;
+            left: 0;
             width: auto;
             height: auto;
-
-            
+           
+             
             ul {
                 margin-top: 8px;
                 background: rgba(255, 255, 255, 0.9);
@@ -130,7 +133,9 @@ header>div {
             background: rgba(207, 207, 207, 0.4);
 
             .dropdown__content {
-                display: block;
+                transition:  .3s ease-in-out;
+                visibility: visible;
+                opacity: 1;
             }
         }
     }

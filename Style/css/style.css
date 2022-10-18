@@ -44,6 +44,7 @@ header > div .header__menu ul li {
   margin: 0 2px;
 }
 header > div .header__icon svg:hover path {
+  transition: fill 0.2s ease-in-out;
   fill: #3396ff;
 }
 header > div .header__button {
@@ -63,10 +64,14 @@ header > div .dropdown {
   position: relative;
   display: inline-block;
   border-radius: 7px;
+  transition: all 0.3s ease;
 }
 header > div .dropdown__content {
-  display: none;
+  visibility: hidden;
+  opacity: 0;
   position: absolute;
+  top: 100%;
+  left: 0;
   width: auto;
   height: auto;
 }
@@ -99,7 +104,9 @@ header > div .dropdown:hover {
   background: rgba(207, 207, 207, 0.4);
 }
 header > div .dropdown:hover .dropdown__content {
-  display: block;
+  transition: 0.3s ease-in-out;
+  visibility: visible;
+  opacity: 1;
 }
 
 * {
